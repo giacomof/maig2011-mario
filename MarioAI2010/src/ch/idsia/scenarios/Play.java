@@ -31,6 +31,10 @@ import ch.idsia.agents.learning.LargeMLPAgent;
 import ch.idsia.benchmark.tasks.BasicTask;
 import ch.idsia.benchmark.tasks.MarioCustomSystemOfValues;
 import ch.idsia.tools.MarioAIOptions;
+import competition.evostar.sergeykarakovskiy.SergeyKarakovskiy_JumpingAgent;
+import competition.gic2010.gameplay.sergeykarakovskiy.SergeyKarakovskiy_ForwardAgent;
+import competition.gic2010.learning.sergeykarakovskiy.SergeyKarakovskiy_MLPAgent;
+import competition.wcci.NikolaySohryakov.NikolaySohryakovAgent;
 import java.util.Set;
  /**
  * Created by IntelliJ IDEA.
@@ -64,7 +68,7 @@ public final class Play
 public static void main(String[] args)
 {
     final MarioAIOptions marioAIOptions = new MarioAIOptions(args);
-//    marioAIOptions.setAgent(new LargeMLPAgent());
+    marioAIOptions.setAgent(new NikolaySohryakovAgent());
     
     final BasicTask basicTask = new BasicTask(marioAIOptions);
     marioAIOptions.setVisualization(true);

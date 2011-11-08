@@ -29,10 +29,12 @@ package ch.idsia.scenarios;
 
 import ch.idsia.agents.Agent;
 import ch.idsia.agents.controllers.ForwardAgent;
+import ch.idsia.agents.controllers.human.HumanKeyboardAgent;
 import ch.idsia.benchmark.mario.environments.Environment;
 import ch.idsia.benchmark.tasks.BasicTask;
 import ch.idsia.tools.MarioAIOptions;
 
+import competition.wcci.NikolaySohryakov.NikolaySohryakovAgent;
 import java.io.IOException;
 
 /**
@@ -49,7 +51,8 @@ public static void main(String[] args)
 {
 //final String argsString = "-vis on";
     final MarioAIOptions marioAIOptions = new MarioAIOptions(args);
-    final Agent agent = new ForwardAgent();
+    final Agent agent = new NikolaySohryakovAgent();
+    marioAIOptions.setAgent(agent);
     final BasicTask basicTask = new BasicTask(marioAIOptions);
     for (int i = 0; i < 10; ++i)
     {
